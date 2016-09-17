@@ -1,0 +1,18 @@
+WhatsMyColorIntent what's my dogs name
+WhatsMyColorIntent what is my dogs name
+WhatsMyColorIntent what's dogs name
+WhatsMyColorIntent what is dogs name
+WhatsMyColorIntent my dogs name
+WhatsMyColorIntent my favorite dogs name
+WhatsMyColorIntent get my dogs name
+WhatsMyColorIntent get my favorite dogs name
+WhatsMyColorIntent give me my favorite dogs name
+WhatsMyColorIntent give me my dogs name
+WhatsMyColorIntent what my dogs name is
+WhatsMyColorIntent what my favorite dogs name is
+WhatsMyColorIntent yes
+WhatsMyColorIntent yup
+WhatsMyColorIntent sure
+WhatsMyColorIntent yes please
+MyColorIsIntent my favorite dogs name is {Dog}
+WelcomeFamily welcome the family to our house
