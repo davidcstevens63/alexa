@@ -9,16 +9,16 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
         card: {
             type: 'Simple',
             title: `SessionSpeechlet - ${title}`,
-    content: `SessionSpeechlet - ${output}`,
-},
-    reprompt: {
-        outputSpeech: {
-            type: 'PlainText',
-                text: repromptText,
+            content: `SessionSpeechlet - ${output}`,
         },
-    },
-    shouldEndSession,
-};
+        reprompt: {
+            outputSpeech: {
+                type: 'PlainText',
+                text: repromptText,
+            },
+        },
+        shouldEndSession,
+    };
 }
 
 function buildResponse(sessionAttributes, speechletResponse) {
@@ -86,8 +86,8 @@ function onSessionEnded( sessionEndedRequest, session) {
 // etc.) The JSON body of the request is provided in the event parameter.
 
 exports.handler = (event, context, callback) => {
-    try
-    {
+    try{
+        console.log(`event.session.application.applicationId=${event.session.application.applicationId}`);
 
         /**
          * Uncomment this if statement and populate with your skill's application ID to
@@ -108,21 +108,19 @@ exports.handler = (event, context, callback) => {
             onLaunch(event.request,
                 event.session,
                 (sessionAttributes, speechletResponse) => {
-                callback(null, buildResponse(sessionAttributes, speechletResponse));
-        });
+                    callback(null, buildResponse(sessionAttributes, speechletResponse));
+                });
         } else if (event.request.type === 'IntentRequest') {
             onIntent(event.request,
                 event.session,
                 (sessionAttributes, speechletResponse) => {
-                callback(null, buildResponse(sessionAttributes, speechletResponse));
-        });
+                    callback(null, buildResponse(sessionAttributes, speechletResponse));
+                });
         } else if (event.request.type === 'SessionEndedRequest') {
             onSessionEnded(event.request, event.session);
             callback();
         }
-    }
-    catch (err)
-    {
+    } catch (err) {
         callback(err);
     }
 }
