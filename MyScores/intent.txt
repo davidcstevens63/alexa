@@ -3,7 +3,7 @@
     {
 	  "intent": "WelcomeToScores"
 	},
-	{
+    {
       "intent": "AMAZON.HelpIntent"
     }
   ]
