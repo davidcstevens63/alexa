@@ -1,0 +1,10 @@
+{
+  "intents": [
+    {
+	  "intent": "WelcomeToScores"
+	},
+	{
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
